@@ -1,0 +1,7 @@
+{
+    "profileConfig": {
+        "title" : "Perfil",
+        "loadingProfile" : "Cargando perfil ...",
+        "savingProfile" : "Guardando perfil ..."
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "profileConfig": {
+        "title" : "Profil",
+        "loadingProfile" : "Chargement du profil...",
+        "savingProfile" : "Enregistrement du profil..."
+    }
+}

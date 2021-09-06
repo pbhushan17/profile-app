@@ -1,0 +1,30 @@
+<h1 translate>profileConfig.title</h1>
+<input type="button" class="btn" value="English" (click)="changeLang('en')">
+<input type="button" class="btn" value="Spanish" (click)="changeLang('es')">
+<input type="button" class="btn" value="French" (click)="changeLang('fr')">
+<div *ngIf="user">
+    <p>Username:{{user.username}}</p>
+
+    <div>
+        <label>First Name:</label>
+        <input type="text" [(ngModel)]="user.firstName" />
+    </div>
+    <div>
+        <label>Last Name:</label>
+        <input type="text" [(ngModel)]="user.lastName" />
+    </div>
+    <div>
+        <label>Email:</label>
+        <input [readOnly]="true" type="email" [(ngModel)]="user.email" />
+    </div>
+    <input type="button" class="btn" value="Save" (click)="setName(user.firstName,user.lastName)">
+</div>
+<div *ngIf="isLoading">
+    <p translate>profileConfig.loadingProfile</p>
+</div>
+<div *ngIf="isError">
+    <p>Error!: {{errorMessage}}</p>
+</div>
+<div *ngIf="isSaveProfile">
+    <p translate>profileConfig.savingProfile</p>
+</div>
